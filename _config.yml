@@ -1,0 +1,14 @@
+title: Keep Your Options
+description: A learning journey about investment options.
+url: "https://www.keepyouroptions.com"
+baseurl: ""
+
+markdown: kramdown
+permalink: /:year/:month/:title.html
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+
+show_excerpts: true
