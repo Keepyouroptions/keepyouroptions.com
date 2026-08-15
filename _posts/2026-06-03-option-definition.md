@@ -8,8 +8,6 @@ source: Merriam-Webster
 description: "What the word 'option' actually means, how the definition shifts across finance, law, and education, and why this blog is named Keep Your Options."
 ---
 
-# Option Definition and Keep Your Option Blog Name
-
 The word option traces back to the Latin *optio*, meaning choice or selection. At its core, an option is one path picked out of several available ones — the freedom to choose between alternatives, or a feature you can add on top of something else, the way a car buyer picks upgrades from a trim list.
 
 The catch is that "option" doesn't mean quite the same thing in every context. Here's how it breaks down.
