@@ -35,8 +35,15 @@ html {
   background: var(--paper);
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   color: var(--ink);
   background: var(--paper);
   font-family: var(--font-body);
@@ -65,11 +72,17 @@ img { max-width: 100%; }
   max-width: 44rem;
   margin: 0 auto;
   padding: 0 1.5rem;
+  width: 100%;
+}
+
+main.wrap {
+  flex: 1 0 auto;
 }
 
 /* ---------- header / masthead ---------- */
 
 .masthead {
+  flex: none;
   border-bottom: 1px solid var(--paper-line);
   padding: 2.25rem 0 1.25rem;
 }
@@ -302,6 +315,7 @@ img { max-width: 100%; }
 /* ---------- site footer ---------- */
 
 .site-footer {
+  flex: none;
   border-top: 1px solid var(--ink);
   margin-top: 2rem;
   padding: 1.75rem 0 2.5rem;
