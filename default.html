@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500;1,600&family=Literata:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <div class="masthead__row">
+        <a class="masthead__brand" href="{{ '/' | relative_url }}">
+          {% include branch-mark.html %}
+          <span class="masthead__title">{{ site.title }}</span>
+        </a>
+        <nav class="masthead__nav">
+          <a href="{{ '/' | relative_url }}">Entries</a>
+          <a href="{{ '/feed.xml' | relative_url }}">Feed</a>
+        </nav>
+      </div>
+      {% if site.tagline %}
+        <p class="masthead__tagline">{{ site.tagline }}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  <main class="wrap">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__row">
+      <span class="site-footer__brand">{{ site.title }}</span>
+      <span class="site-footer__meta">{{ site.description }}</span>
+    </div>
+  </footer>
+</body>
+</html>

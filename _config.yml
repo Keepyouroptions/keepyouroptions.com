@@ -1,4 +1,5 @@
 title: Keep Your Options
+tagline: A running ledger of learning options trading.
 description: A learning journey about investment options.
 url: "https://www.keepyouroptions.com"
 baseurl: ""
@@ -6,10 +7,20 @@ baseurl: ""
 markdown: kramdown
 permalink: /:year/:month/:title.html
 
-theme: minima
-
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default
 
 show_excerpts: true
