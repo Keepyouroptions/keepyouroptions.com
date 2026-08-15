@@ -20,7 +20,6 @@
         </a>
         <nav class="masthead__nav">
           <a href="{{ '/' | relative_url }}">Entries</a>
-          <a href="{{ '/feed.xml' | relative_url }}">Feed</a>
         </nav>
       </div>
       {% if site.tagline %}
@@ -37,6 +36,7 @@
     <div class="wrap site-footer__row">
       <span class="site-footer__brand">{{ site.title }}</span>
       <span class="site-footer__meta">{{ site.description }}</span>
+      <a class="site-footer__feed" href="{{ '/feed.xml' | relative_url }}">Feed</a>
     </div>
   </footer>
 </body>

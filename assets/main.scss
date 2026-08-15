@@ -338,3 +338,16 @@ main.wrap {
   font-size: 0.72rem;
   color: var(--ink-faint);
 }
+.site-footer__feed {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.site-footer__feed:hover {
+  color: var(--ink);
+  border-bottom-color: var(--gold-deep);
+}
