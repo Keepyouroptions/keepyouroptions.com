@@ -97,28 +97,40 @@ main.wrap {
 
 .masthead__brand {
   display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
+  align-items: center;
+  gap: 0.75rem;
   text-decoration: none;
   color: var(--ink);
 }
 
-.masthead__title {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 1.7rem;
-  letter-spacing: 0.01em;
-}
-
 .brand-mark {
   flex: none;
+  width: 2.25rem;
+  height: 2.25rem;
   overflow: visible;
 }
 
+.masthead__title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  line-height: 1;
+}
+
+.masthead__title-base {
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #1e293b;
+  letter-spacing: 0.01em;
+}
+
 .masthead__accent {
+  font-family: "Playfair Display", serif;
   font-style: italic;
-  color: var(--gold-deep);
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: #b45309;
 }
 
 .masthead__nav {
