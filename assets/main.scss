@@ -25,7 +25,7 @@
   --font-body: "Literata", Georgia, serif;
   --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
 
-  --measure: clamp(42rem, 30rem + 20vw, 58rem);
+  --measure: min(78vw, 68rem);
   --radius: 2px;
 }
 
@@ -70,7 +70,7 @@ img { max-width: 100%; }
 /* ---------- layout shell ---------- */
 
 .wrap {
-  max-width: clamp(48rem, 26rem + 24vw, 80rem);
+  max-width: min(88vw, 92rem);
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 4rem);
   width: 100%;
