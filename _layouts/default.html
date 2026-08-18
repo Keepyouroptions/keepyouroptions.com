@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500;1,600&family=Literata:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Lexend:wght@500;600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <div class="masthead__row">
+        <a class="masthead__brand" href="{{ '/' | relative_url }}">
+          {% include logo-mark.html %}
+          <span class="masthead__title">
+            <span class="masthead__title-base">Keep Your Options</span>
+            <span class="masthead__accent">Open.</span>
+          </span>
+        </a>
+        <nav class="masthead__nav">
+          <a href="{{ '/' | relative_url }}">Entries</a>
+        </nav>
+      </div>
+      {% if site.tagline %}
+        <p class="masthead__tagline">{{ site.tagline }}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  <main class="wrap">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__row">
+      <span class="site-footer__brand">{{ site.title }}</span>
+      <span class="site-footer__meta">{{ site.description }}</span>
+      <a class="site-footer__feed" href="{{ '/feed.xml' | relative_url }}">Feed</a>
+    </div>
+  </footer>
+</body>
+</html>
