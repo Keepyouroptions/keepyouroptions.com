@@ -1,22 +1,28 @@
 ---
 layout: default
 ---
-<article>
-  <header class="post-header">
-    <div class="post-meta">
-      <span>{{ page.date | date: "%d %b %Y" }}</span>
-      {% for cat in page.categories %}
-        <span class="tag">{{ cat }}</span>
-      {% endfor %}
-    </div>
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+{% assign is_call = false %}
+{% assign is_put = false %}
+{% if page.tags contains 'calls' %}{% assign is_call = true %}{% endif %}
+{% if page.tags contains 'puts' %}{% assign is_put = true %}{% endif %}
+
+<article class="post">
+  <div class="post-meta">
+    <span class="post-date">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
+    </span>
+    {% if page.categories.size > 0 %}
+    <span class="post-tag{% if is_call %} post-tag-call{% endif %}{% if is_put %} post-tag-put{% endif %}">
+      {% if is_call %}Call &middot; {% elsif is_put %}Put &middot; {% endif %}{{ page.categories | first }}
+    </span>
+    {% endif %}
+  </div>
+
+  <h1 class="post-title">{{ page.title }}</h1>
 
   <div class="post-content">
     {{ content }}
   </div>
-
-  <footer class="post-footer">
-    <a href="{{ '/' | relative_url }}">&larr; Back to all entries</a>
-  </footer>
 </article>
+
+{% include comments.html %}

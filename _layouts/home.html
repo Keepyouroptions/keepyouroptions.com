@@ -1,18 +1,24 @@
 ---
 layout: default
 ---
-<section class="intro">
-  {{ content }}
-</section>
+<h1 class="home-title sr-only">{{ site.title }}</h1>
 
-<div class="ledger">
+<div class="home-intro">
+  {{ content }}
+</div>
+
+<ul class="ledger">
   {% for post in site.posts %}
-    <a class="ledger__row" href="{{ post.url | relative_url }}">
-      <span class="ledger__date">{{ post.date | date: "%d %b %Y" }}</span>
-      <span class="ledger__title">{{ post.title }}</span>
-      {% if post.categories.first %}
-        <span class="tag">{{ post.categories.first }}</span>
+  <li>
+    <a href="{{ post.url | relative_url }}" class="ledger-row">
+      <span class="ledger-date">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+      </span>
+      <span class="ledger-title">{{ post.title }}</span>
+      {% if post.categories.size > 0 %}
+      <span class="ledger-tag">{{ post.categories | first }}</span>
       {% endif %}
     </a>
+  </li>
   {% endfor %}
-</div>
+</ul>
