@@ -7,11 +7,6 @@ layout: default
   {{ content }}
 </div>
 
-<div class="home-newsletter">
-  <h2 class="newsletter-heading sr-only">Subscribe for updates</h2>
-  {% include newsletter-signup.html %}
-</div>
-
 <ul class="ledger">
   {% for post in site.posts %}
   <li>
@@ -27,3 +22,8 @@ layout: default
   </li>
   {% endfor %}
 </ul>
+
+<div class="home-newsletter">
+  <h2 class="newsletter-heading sr-only">Subscribe for updates</h2>
+  {% include newsletter-signup.html %}
+</div>

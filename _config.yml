@@ -4,6 +4,9 @@ description: A learning journey about investment options.
 url: "https://www.keepyouroptions.com"
 baseurl: ""
 
+feed:
+  icon: /assets/favicon/android-chrome-512x512.png
+
 markdown: kramdown
 permalink: /:year/:month/:title.html
 

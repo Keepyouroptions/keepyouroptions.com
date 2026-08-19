@@ -420,7 +420,9 @@ textarea:focus-visible {
 
 // ── Newsletter (homepage) ───────────────────────────────────
 .home-newsletter {
-  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid $paper-line;
 
   .contact-form {
     max-width: none;
