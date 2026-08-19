@@ -377,6 +377,62 @@ textarea:focus-visible {
   a { color: $amber; text-decoration: underline; }
 }
 
+// ── Share buttons ────────────────────────────────────────────
+.share-buttons {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $paper-line;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: $font-mono;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.share-label {
+  color: $ink-soft;
+}
+
+.share-link {
+  color: $ink-soft;
+  border: 1px solid $paper-line;
+  border-radius: 3px;
+  padding: 0.3rem 0.6rem;
+
+  &:hover { color: $amber; border-color: rgba($amber, 0.4); }
+}
+
+// ── Post CTA ─────────────────────────────────────────────────
+.post-cta {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba($amber, 0.06);
+  border: 1px solid rgba($amber, 0.25);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: $ink-soft;
+
+  p { margin: 0; }
+}
+
+// ── Newsletter (homepage) ───────────────────────────────────
+.home-newsletter {
+  margin-bottom: 2.5rem;
+
+  .contact-form {
+    max-width: none;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    .form-field { flex: 1; min-width: 14rem; }
+    .contact-privacy-note { flex-basis: 100%; margin-top: 0.5rem; }
+  }
+}
+
 // ── Footer ─────────────────────────────────────────────────
 .site-footer {
   max-width: 760px;
@@ -396,6 +452,15 @@ textarea:focus-visible {
 .footer-links {
   display: flex;
   gap: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  a:hover { color: $amber; }
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 

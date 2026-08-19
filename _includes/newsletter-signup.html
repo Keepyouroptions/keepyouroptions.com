@@ -1,0 +1,27 @@
+{% comment %}
+  Newsletter signup via Buttondown (https://buttondown.email).
+  Chosen over Mailchimp/ConvertKit-style tools because: no ads, minimal data
+  collection by default (email only), straightforward GDPR-compliant export/delete
+  tools, and no dark-pattern pre-checked marketing consent boxes baked into the embed.
+
+  SETUP REQUIRED:
+  1. Create a free Buttondown account.
+  2. Replace REPLACE_ME_USERNAME below (two places) with your Buttondown username.
+{% endcomment %}
+<form action="https://buttondown.email/api/emails/embed-subscribe/REPLACE_ME_USERNAME"
+      method="post"
+      target="popupwindow"
+      class="newsletter-form"
+      onsubmit="window.open('https://buttondown.email/REPLACE_ME_USERNAME', 'popupwindow')">
+  <div class="form-field">
+    <label for="newsletter-signup-email">Email address</label>
+    <input id="newsletter-signup-email" name="email" type="email" required aria-describedby="newsletter-signup-consent">
+  </div>
+  <input type="hidden" value="1" name="embed">
+  <button type="submit" class="contact-submit">Subscribe</button>
+  <p id="newsletter-signup-consent" class="contact-privacy-note">
+    We'll only use this to send post updates — see our
+    <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>. Unsubscribe anytime via
+    the link in any email.
+  </p>
+</form>
