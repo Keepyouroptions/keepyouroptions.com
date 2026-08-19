@@ -28,10 +28,11 @@ third-party email newsletter provider, solely to send you post updates. We don't
 list with anyone else, and every email includes an unsubscribe link that removes you
 immediately.
 
-**Contact form.** The [Contact page]({{ '/contact/' | relative_url }}) sends the name, email
-address, and message you submit to Formspree, a third-party form-processing service, which
-relays it to us by email. We use this only to reply to you and don't add you to any mailing
-list from a contact submission alone.
+**Contact form.** The [Contact page]({{ '/contact/' | relative_url }}) opens your own email
+app with a pre-filled message addressed to hello@keepyouroptions.com. No third-party form
+service is involved — your message travels directly through your own email provider, exactly
+as if you'd typed our address into a new email yourself. We don't see anything until it
+arrives in our inbox.
 
 **Comments.** Comments on posts are powered by giscus, which stores comments as GitHub
 Discussions on this site's repository. Posting a comment requires a free GitHub account, and

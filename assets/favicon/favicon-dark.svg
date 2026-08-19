@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="prism-beam-grad-tiny-dark" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+  <line x1="4" y1="50" x2="36" y2="50" stroke="#ffffff" stroke-width="10" stroke-linecap="round" />
+  <polygon points="36,30 56,50 36,70" fill="#ffffff" stroke="#ffffff" stroke-width="10" stroke-linejoin="round" />
+  <path d="M56,50 Q76,50 96,50" fill="none" stroke="url(#prism-beam-grad-tiny-dark)" stroke-width="12" stroke-linecap="round" />
+  <circle cx="96" cy="50" r="7" fill="#f59e0b" />
+</svg>

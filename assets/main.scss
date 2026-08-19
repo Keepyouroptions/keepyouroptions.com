@@ -377,6 +377,40 @@ textarea:focus-visible {
   a { color: $amber; text-decoration: underline; }
 }
 
+.email-fallback {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  background: rgba($ink, 0.04);
+  border: 1px solid $paper-line;
+  border-radius: 6px;
+
+  code {
+    font-family: $font-mono;
+    font-size: 0.85rem;
+    color: $ink;
+    background: none;
+    padding: 0;
+  }
+}
+
+.copy-btn {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $ink-soft;
+  background: #fff;
+  border: 1px solid $paper-line;
+  border-radius: 4px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+
+  &:hover { color: $amber; border-color: rgba($amber, 0.4); }
+}
+
 // ── Share buttons ────────────────────────────────────────────
 .share-buttons {
   margin-top: 2.5rem;
