@@ -11,12 +11,20 @@ bundle exec jekyll serve
 
 Site will be available at http://localhost:4000
 
-## Cloudflare Pages deployment settings
+## Cloudflare Workers Builds deployment settings
 
-- **Framework preset:** Jekyll
-- **Build command:** `bundle exec jekyll build`
-- **Build output directory:** `_site`
-- **Environment variable:** `RUBY_VERSION` = `3.2.2` (or your local Ruby version)
+This site deploys via **Cloudflare Workers Builds** (not the classic Pages dashboard —
+there's no "Framework preset" dropdown here). Configuration lives in `wrangler.jsonc`
+and `package.json` rather than dashboard env vars.
+
+- **Build command** (dashboard → Settings → Build): `bundle exec jekyll build`
+- **Deploy command**: `npx wrangler deploy`
+- **Output directory**: `_site` (must match `assets.directory` in `wrangler.jsonc`)
+- Ruby/Node versions are auto-detected from the build environment; no `RUBY_VERSION`
+  env var needed
+- Both `keepyouroptions.com` and `www.keepyouroptions.com` are declared under
+  `routes` in `wrangler.jsonc` with `"custom_domain": true` — adding them through
+  the dashboard's domain UI directly has been unreliable for the `www` host
 
 ## Adding a new post
 
