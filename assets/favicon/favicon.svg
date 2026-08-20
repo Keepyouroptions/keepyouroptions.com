@@ -1,12 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    .fc-dark-fill { fill: #1e293b; }
+    .fc-dark-stroke { stroke: #1e293b; }
+    .fc-accent { fill: #b45309; }
+    .fc-beam-start { stop-color: #1e293b; }
+    .fc-beam-end { stop-color: #b45309; }
+    @media (prefers-color-scheme: dark) {
+      .fc-dark-fill { fill: #ffffff; }
+      .fc-dark-stroke { stroke: #ffffff; }
+      .fc-accent { fill: #f59e0b; }
+      .fc-beam-start { stop-color: #ffffff; }
+      .fc-beam-end { stop-color: #f59e0b; }
+    }
+  </style>
   <defs>
     <linearGradient id="prism-beam-grad-tiny" x1="0%" y1="50%" x2="100%" y2="50%">
-      <stop offset="0%" stop-color="#1e293b" />
-      <stop offset="100%" stop-color="#b45309" />
+      <stop class="fc-beam-start" offset="0%" />
+      <stop class="fc-beam-end" offset="100%" />
     </linearGradient>
   </defs>
-  <line x1="4" y1="50" x2="36" y2="50" stroke="#1e293b" stroke-width="10" stroke-linecap="round" />
-  <polygon points="36,30 56,50 36,70" fill="#1e293b" stroke="#1e293b" stroke-width="10" stroke-linejoin="round" />
+  <line class="fc-dark-stroke" x1="4" y1="50" x2="36" y2="50" stroke-width="10" stroke-linecap="round" />
+  <polygon class="fc-dark-fill fc-dark-stroke" points="36,30 56,50 36,70" stroke-width="10" stroke-linejoin="round" />
   <path d="M56,50 Q76,50 96,50" fill="none" stroke="url(#prism-beam-grad-tiny)" stroke-width="12" stroke-linecap="round" />
-  <circle cx="96" cy="50" r="7" fill="#b45309" />
+  <circle class="fc-accent" cx="96" cy="50" r="7" />
 </svg>
