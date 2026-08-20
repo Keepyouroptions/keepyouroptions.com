@@ -1,26 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <style>
-    .fc-dark-fill { fill: #1e293b; }
-    .fc-dark-stroke { stroke: #1e293b; }
-    .fc-accent { fill: #b45309; }
-    .fc-beam-start { stop-color: #1e293b; }
-    .fc-beam-end { stop-color: #b45309; }
+    .fc-line-fill { stroke: #1e293b; fill: #1e293b; }
+    .fc-tri-fill { fill: #1e293b; }
+    .fc-amber-a { stroke: #b45309; }
+    .fc-amber-b { fill: #b45309; }
+    .fc-grad-start { stop-color: #1e293b; }
+    .fc-grad-end { stop-color: #b45309; }
     @media (prefers-color-scheme: dark) {
-      .fc-dark-fill { fill: #ffffff; }
-      .fc-dark-stroke { stroke: #ffffff; }
-      .fc-accent { fill: #f59e0b; }
-      .fc-beam-start { stop-color: #ffffff; }
-      .fc-beam-end { stop-color: #f59e0b; }
+      .fc-line-fill { stroke: #ffffff; fill: #ffffff; }
+      .fc-tri-fill { fill: #ffffff; }
+      .fc-amber-a { stroke: #f59e0b; }
+      .fc-amber-b { fill: #f59e0b; }
+      .fc-grad-start { stop-color: #ffffff; }
+      .fc-grad-end { stop-color: #f59e0b; }
     }
   </style>
   <defs>
-    <linearGradient id="prism-beam-grad-tiny" x1="0%" y1="50%" x2="100%" y2="50%">
-      <stop class="fc-beam-start" offset="0%" />
-      <stop class="fc-beam-end" offset="100%" />
+    <linearGradient id="prism-beam-grad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop class="fc-grad-start" offset="0%" />
+      <stop class="fc-grad-end" offset="100%" />
     </linearGradient>
   </defs>
-  <line class="fc-dark-stroke" x1="4" y1="50" x2="36" y2="50" stroke-width="10" stroke-linecap="round" />
-  <polygon class="fc-dark-fill fc-dark-stroke" points="36,30 56,50 36,70" stroke-width="10" stroke-linejoin="round" />
-  <path d="M56,50 Q76,50 96,50" fill="none" stroke="url(#prism-beam-grad-tiny)" stroke-width="12" stroke-linecap="round" />
-  <circle class="fc-accent" cx="96" cy="50" r="7" />
+  <line class="fc-line-fill" x1="6" y1="50" x2="36" y2="50" stroke-width="7" stroke-linecap="round" />
+  <circle class="fc-tri-fill" cx="6" cy="50" r="3" />
+  <polygon points="36,34 52,50 36,66" fill="none" class="fc-line-fill" stroke-width="7" stroke-linejoin="round" />
+  <polygon points="36,34 52,50 36,66" class="fc-tri-fill" opacity="0.14" />
+  <path d="M52,50 Q70,32 92,28" fill="none" class="fc-amber-a" stroke-width="7" stroke-linecap="round" opacity="0.55" />
+  <path d="M52,50 Q72,50 94,50" fill="none" stroke="url(#prism-beam-grad)" stroke-width="9.5" stroke-linecap="round" />
+  <path d="M52,50 Q70,68 92,72" fill="none" class="fc-amber-a" stroke-width="7" stroke-linecap="round" opacity="0.9" />
+  <circle cx="92" cy="28" r="3.6" class="fc-amber-b" opacity="0.65"/>
+  <circle cx="94" cy="50" r="4.4" class="fc-amber-b" />
+  <circle cx="92" cy="72" r="3.6" class="fc-amber-b" />
 </svg>
